@@ -28,24 +28,24 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     @IBOutlet weak var CameraOutletButton: UIButton!
     
-    // Аутлеты и view еще не успели прогрузится, поэтому ошибка:
-//    init() {
-//        super.init(nibName: nil, bundle: nil)
-//        print("Frame from Init: \(EditOutletButton.frame)")
+    // Аутлеты и view еще не успели прогрузится и соответсвенно передать значения frame, поэтому ошибка:
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)   {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//        printInConsoleLogs(nameOfMethod: #function)
 //    }
-//
-//    required public init(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        printInConsoleLogs(nameOfMethod: #function)
 //    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
          imagePickerController.delegate = self
-        print("Frame from ViewDidLoad: \(EditOutletButton.frame)")
+        printInConsoleLogs(nameOfMethod: #function)
     
         ChangeEditButton()
-     
+        
         if flag{print(#function)}
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -57,7 +57,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 //Когда выводим значние frame во ViewDidLoad, мы увидим параметры положения и размеров кнопки, которые актуальны для Iphone SE(девайс который выбран в .storyboard).
 //А Когда выводим значние frame во ViewDidAppear, то увидим параметры положения и размеров кнопки, после завершения примения constrains
 //тк мы выбрали в симуляторе девайс Iphone X( у которого другие габариты экрана), то из-за наличия constrains он подвинет кнопку "редактировать"
-        print("Frame from ViewDidAppear: \(EditOutletButton.frame)")
+        printInConsoleLogs(nameOfMethod: #function)
+        
         if flag{print(#function)}
     }
     override func viewWillLayoutSubviews() {
@@ -80,6 +81,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         if flag{print(#function)}
     }
 
+    func  printInConsoleLogs(nameOfMethod: String) -> Void{
+        print("Frame from \(nameOfMethod): \(EditOutletButton.frame)")
+
+    }
 
     
     
