@@ -44,7 +44,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
          imagePickerController.delegate = self
         print("Frame from ViewDidLoad: \(EditOutletButton.frame)")
     
-        ChangeButton()
+        ChangeEditButton()
      
         if flag{print(#function)}
     }
@@ -94,7 +94,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         UserPhotoImageView.layer.masksToBounds = true
     }
 
-     private func ChangeButton() -> Void{
+     private func ChangeEditButton() -> Void{
         EditOutletButton.layer.cornerRadius = 5    // радиус закругления закругление
         EditOutletButton.layer.borderWidth = 2   // толщина обводки
         EditOutletButton.layer.borderColor = UIColor.black.cgColor// цвет обводки
