@@ -14,19 +14,19 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     let imagePickerController = UIImagePickerController()
     
     
-    @IBAction func EditButton(_ sender: Any) {
+    @IBAction func editButton(_ sender: Any) {
     }
     
-    @IBOutlet weak var EditOutletButton: UIButton!
+    @IBOutlet weak var editOutletButton: UIButton!
     
     
-    @IBOutlet weak var UserPhotoImageView: UIImageView!
+    @IBOutlet weak var userPhotoImageView: UIImageView!
 
-    @IBAction func CameraButton(_ sender: Any) {
+    @IBAction func cameraButton(_ sender: Any) {
        MakeAlertActionSheet()
     print("Выбери изображение профиля")
     }
-    @IBOutlet weak var CameraOutletButton: UIButton!
+    @IBOutlet weak var cameraOutletButton: UIButton!
     
     // Аутлеты и view еще не успели прогрузится и соответсвенно передать значения frame, поэтому ошибка:
 //    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)   {
@@ -64,12 +64,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         if flag{print(#function)}
-        MakeConstrains()
+        
     }
     
     override func viewDidLayoutSubviews() {
        super.viewDidLayoutSubviews()
-        
+        MakeConstrains()
         if flag{print(#function)}
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -82,7 +82,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
 
     func  printInConsoleLogs(nameOfMethod: String) -> Void{
-        print("Frame from \(nameOfMethod): \(EditOutletButton.frame)")
+        print("Frame from \(nameOfMethod): \(editOutletButton.frame)")
 
     }
 
@@ -90,20 +90,20 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     private func MakeConstrains() -> Void{
         
-        CameraOutletButton.contentVerticalAlignment = .fill
-        CameraOutletButton.contentHorizontalAlignment = .fill
-        CameraOutletButton.imageEdgeInsets = UIEdgeInsets(top: CameraOutletButton.frame.height/4, left: CameraOutletButton.frame.height/4, bottom: CameraOutletButton.frame.height/4, right: CameraOutletButton.frame.height/4)
-        CameraOutletButton.layer.cornerRadius = CameraOutletButton.frame.height/2
-        CameraOutletButton.layer.masksToBounds = true
-        UserPhotoImageView.layer.cornerRadius = CameraOutletButton.frame.height/2
-        UserPhotoImageView.layer.masksToBounds = true
+        cameraOutletButton.contentVerticalAlignment = .fill
+        cameraOutletButton.contentHorizontalAlignment = .fill
+        cameraOutletButton.imageEdgeInsets = UIEdgeInsets(top: cameraOutletButton.frame.height/4, left: cameraOutletButton.frame.height/4, bottom: cameraOutletButton.frame.height/4, right: cameraOutletButton.frame.height/4)
+        cameraOutletButton.layer.cornerRadius = cameraOutletButton.frame.height/2
+        cameraOutletButton.layer.masksToBounds = true
+        userPhotoImageView.layer.cornerRadius = cameraOutletButton.frame.height/2
+        userPhotoImageView.layer.masksToBounds = true
     }
 
      private func ChangeEditButton() -> Void{
-        EditOutletButton.layer.cornerRadius = 5    // радиус закругления закругление
-        EditOutletButton.layer.borderWidth = 2   // толщина обводки
-        EditOutletButton.layer.borderColor = UIColor.black.cgColor// цвет обводки
-        EditOutletButton.clipsToBounds = true
+        editOutletButton.layer.cornerRadius = 5    // радиус закругления закругление
+        editOutletButton.layer.borderWidth = 2   // толщина обводки
+        editOutletButton.layer.borderColor = UIColor.black.cgColor// цвет обводки
+        editOutletButton.clipsToBounds = true
     }
     
     private func MakeAlertActionSheet() -> Void{
@@ -138,15 +138,18 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            UserPhotoImageView.image = pickedImage
+            userPhotoImageView.image = pickedImage
         }
         
         dismiss(animated: true, completion: nil)
     }
     
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
 }
 
 

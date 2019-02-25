@@ -1,0 +1,80 @@
+//
+//  ChatViewController.swift
+//  TinkoffChat
+//
+//  Created by Антон Шуплецов on 25/02/2019.
+//  Copyright © 2019 Антон Шуплецов. All rights reserved.
+//
+
+import UIKit
+
+class ChatViewController: UIViewController{
+    
+    var navigationTitle = ""
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        navigationItem.title = navigationTitle
+        //makeChats()
+    }
+    
+    
+}
+
+func findIndexOfName(name: String) -> Int{
+    var index = -1
+    for i in 0...users.count-1{
+        if users[i].name == name{
+            index = i
+        }
+    }
+    return index
+    
+}
+
+extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let i = findIndexOfName(name: navigationTitle)
+        return allMessages[i].count
+    }
+//    func collectionView(_ collectionView: UICollectionView, numberOfRowsInSection section: Int) -> Int {
+//        return 5
+//    }
+    
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+
+        
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
+        //cell.backgroundColor = UIColor.black
+    
+        let i = findIndexOfName(name: navigationTitle)
+        cell.userMessageLabel.text = allMessages[i][indexPath.row].text
+
+        cell.userMessageLabel.layer.cornerRadius = 10
+        cell.userMessageLabel.layer.masksToBounds = true
+       cell.userMessageLabel.backgroundColor = UIColor.yellow
+        //cell.userMessageLabel.bounds.inset(by: UIEdgeInsets(top: 13, left: 13, bottom: 13, right: 13))
+        //cell.userMessageLabel.widthAnchor.constraint(equalToConstant: self.view.frame.width * 0.55).isActive = true
+       //cell.userMessageLabel.textCo
+
+        
+       // label.text = "well donewell donewell donewell donewell donewell done"
+        return cell
+    }
+    
+    
+    
+    
+    }
+    
+
+
+

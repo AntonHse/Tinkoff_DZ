@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wfw-G6-JuR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="vkV-7p-t0I">
+            <objects>
+                <viewController id="wfw-G6-JuR" customClass="ChatViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uv7-aO-RHI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Km7-RK-slK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DBX-GV-ZoX">
+                                    <size key="itemSize" width="346" height="52"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="7DI-NM-4Va" customClass="CollectionViewCell" customModule="TinkoffChat" customModuleProvider="target">
+                                        <rect key="frame" x="14.5" y="0.0" width="346" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="346" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6o-p2-VHq">
+                                                    <rect key="frame" x="20" y="16" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkS-5q-1wV">
+                                                    <rect key="frame" x="338" y="26" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="E6o-p2-VHq" firstAttribute="centerY" secondItem="7DI-NM-4Va" secondAttribute="centerY" id="IVj-77-7dG"/>
+                                            <constraint firstItem="E6o-p2-VHq" firstAttribute="leading" secondItem="7DI-NM-4Va" secondAttribute="leadingMargin" constant="12" id="bxE-ng-Dpb"/>
+                                            <constraint firstAttribute="trailing" secondItem="MkS-5q-1wV" secondAttribute="trailing" constant="8" id="hSb-jh-7T1"/>
+                                            <constraint firstItem="MkS-5q-1wV" firstAttribute="centerY" secondItem="7DI-NM-4Va" secondAttribute="centerY" id="phf-Qd-M53"/>
+                                        </constraints>
+                                        <size key="customSize" width="346" height="52"/>
+                                        <connections>
+                                            <outlet property="myMessageLabel" destination="MkS-5q-1wV" id="9gG-jK-vKW"/>
+                                            <outlet property="userMessageLabel" destination="E6o-p2-VHq" id="ZZi-NB-p3s"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Km7-RK-slK" firstAttribute="bottom" secondItem="Z5a-9T-bey" secondAttribute="bottom" id="01H-xy-ZZN"/>
+                            <constraint firstItem="Km7-RK-slK" firstAttribute="top" secondItem="Z5a-9T-bey" secondAttribute="top" id="5Fn-46-9LK"/>
+                            <constraint firstItem="Km7-RK-slK" firstAttribute="trailing" secondItem="Z5a-9T-bey" secondAttribute="trailing" id="aC7-YD-2Cu"/>
+                            <constraint firstItem="Km7-RK-slK" firstAttribute="leading" secondItem="Z5a-9T-bey" secondAttribute="leading" id="wXP-0X-Osk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z5a-9T-bey"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Km7-RK-slK" id="cdB-rH-Wty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYk-9d-POR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="908.9955022488756"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B603D484221B28E100F680D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B603D483221B28E100F680D3 /* Default-568h@2x.png */; };
+		B6056F0C222082B5008EAEB0 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */; };
 		B6C06CE02218379B00BA71B9 /* slr-camera-2-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C06CDF2218379B00BA71B9 /* slr-camera-2-xxl.png */; };
 		B6E02CD4220ED58600B9B1F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E02CD3220ED58600B9B1F4 /* AppDelegate.swift */; };
 		B6E02CD6220ED58600B9B1F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E02CD5220ED58600B9B1F4 /* ProfileViewController.swift */; };
 		B6E02CD9220ED58600B9B1F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E02CD7220ED58600B9B1F4 /* Main.storyboard */; };
 		B6E02CDB220ED58700B9B1F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E02CDA220ED58700B9B1F4 /* Assets.xcassets */; };
 		B6E02CDE220ED58700B9B1F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E02CDC220ED58700B9B1F4 /* LaunchScreen.storyboard */; };
+		B6EBBD682222BE1B007A0062 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBD672222BE1B007A0062 /* TableViewCell.swift */; };
+		B6EBBD6A2222C609007A0062 /* EditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBD692222C609007A0062 /* EditCell.swift */; };
+		B6EBBD6C2223E27F007A0062 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBD6B2223E27F007A0062 /* ChatViewController.swift */; };
+		B6EBBD6E2224338D007A0062 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBD6D2224338D007A0062 /* CollectionViewCell.swift */; };
+		B6EBBD712224787A007A0062 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBD6F2224787A007A0062 /* Profile.storyboard */; };
+		B6EBBD73222478C2007A0062 /* ConversationsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBD72222478C2007A0062 /* ConversationsList.storyboard */; };
 		B6F134462218368A00F71FF1 /* placeholder-user.png in Resources */ = {isa = PBXBuildFile; fileRef = B6F13444221829A600F71FF1 /* placeholder-user.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B603D483221B28E100F680D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
 		B6C06CDF2218379B00BA71B9 /* slr-camera-2-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "slr-camera-2-xxl.png"; path = "../../../../Тинькофф/Homework UI images/slr-camera-2-xxl.png"; sourceTree = "<group>"; };
 		B6E02CD0220ED58600B9B1F4 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E02CD3220ED58600B9B1F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +33,12 @@
 		B6E02CDA220ED58700B9B1F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6E02CDD220ED58700B9B1F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6E02CDF220ED58700B9B1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6EBBD672222BE1B007A0062 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B6EBBD692222C609007A0062 /* EditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCell.swift; sourceTree = "<group>"; };
+		B6EBBD6B2223E27F007A0062 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B6EBBD6D2224338D007A0062 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		B6EBBD702224787A007A0062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TinkoffChat/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		B6EBBD72222478C2007A0062 /* ConversationsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConversationsList.storyboard; sourceTree = "<group>"; };
 		B6F13444221829A600F71FF1 /* placeholder-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-user.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +56,6 @@
 		B6E02CC7220ED58600B9B1F4 = {
 			isa = PBXGroup;
 			children = (
-				B603D483221B28E100F680D3 /* Default-568h@2x.png */,
 				B6E02CD2220ED58600B9B1F4 /* TinkoffChat */,
 				B6E02CD1220ED58600B9B1F4 /* Products */,
 			);
@@ -63,8 +74,15 @@
 			children = (
 				B6F134432218299900F71FF1 /* Photoes */,
 				B6E02CD3220ED58600B9B1F4 /* AppDelegate.swift */,
-				B6E02CD5220ED58600B9B1F4 /* ProfileViewController.swift */,
+				B6EBBD72222478C2007A0062 /* ConversationsList.storyboard */,
+				B6EBBD6F2224787A007A0062 /* Profile.storyboard */,
 				B6E02CD7220ED58600B9B1F4 /* Main.storyboard */,
+				B6EBBD672222BE1B007A0062 /* TableViewCell.swift */,
+				B6EBBD6D2224338D007A0062 /* CollectionViewCell.swift */,
+				B6E02CD5220ED58600B9B1F4 /* ProfileViewController.swift */,
+				B6EBBD6B2223E27F007A0062 /* ChatViewController.swift */,
+				B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */,
+				B6EBBD692222C609007A0062 /* EditCell.swift */,
 				B6E02CDA220ED58700B9B1F4 /* Assets.xcassets */,
 				B6E02CDC220ED58700B9B1F4 /* LaunchScreen.storyboard */,
 				B6E02CDF220ED58700B9B1F4 /* Info.plist */,
@@ -139,12 +157,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6EBBD712224787A007A0062 /* Profile.storyboard in Resources */,
 				B6C06CE02218379B00BA71B9 /* slr-camera-2-xxl.png in Resources */,
 				B6E02CDE220ED58700B9B1F4 /* LaunchScreen.storyboard in Resources */,
+				B6EBBD73222478C2007A0062 /* ConversationsList.storyboard in Resources */,
 				B6E02CDB220ED58700B9B1F4 /* Assets.xcassets in Resources */,
 				B6F134462218368A00F71FF1 /* placeholder-user.png in Resources */,
 				B6E02CD9220ED58600B9B1F4 /* Main.storyboard in Resources */,
-				B603D484221B28E100F680D3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E02CD6220ED58600B9B1F4 /* ProfileViewController.swift in Sources */,
+				B6EBBD682222BE1B007A0062 /* TableViewCell.swift in Sources */,
+				B6EBBD6A2222C609007A0062 /* EditCell.swift in Sources */,
+				B6EBBD6E2224338D007A0062 /* CollectionViewCell.swift in Sources */,
 				B6E02CD4220ED58600B9B1F4 /* AppDelegate.swift in Sources */,
+				B6EBBD6C2223E27F007A0062 /* ChatViewController.swift in Sources */,
+				B6056F0C222082B5008EAEB0 /* ConversationsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +201,14 @@
 				B6E02CDD220ED58700B9B1F4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B6EBBD6F2224787A007A0062 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6EBBD702224787A007A0062 /* Base */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
