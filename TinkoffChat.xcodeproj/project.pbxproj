@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B643D9FB222ECFB0003CDB69 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = B643D9FA222ECFB0003CDB69 /* Themes.m */; };
-		B6C06CE02218379B00BA71B9 /* slr-camera-2-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C06CDF2218379B00BA71B9 /* slr-camera-2-xxl.png */; };
 		B6D0CFF222300A6000EB4DB2 /* ThemesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D0CFF022300A6000EB4DB2 /* ThemesViewController.storyboard */; };
 		B6D0CFF52230625700EB4DB2 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */; };
 		B6D0CFF72230634900EB4DB2 /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B643D9F7222ECD36003CDB69 /* ThemesViewController.m */; };
@@ -35,7 +34,6 @@
 		B643D9F9222ECFB0003CDB69 /* Themes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Themes.h; sourceTree = "<group>"; };
 		B643D9FA222ECFB0003CDB69 /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
 		B6984315222FDD1F00924574 /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
-		B6C06CDF2218379B00BA71B9 /* slr-camera-2-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "slr-camera-2-xxl.png"; path = "../../../../Тинькофф/Homework UI images/slr-camera-2-xxl.png"; sourceTree = "<group>"; };
 		B6D0CFF122300A6000EB4DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TinkoffChat/Base.lproj/ThemesViewController.storyboard; sourceTree = "<group>"; };
 		B6E02CD0220ED58600B9B1F4 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E02CD3220ED58600B9B1F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 		B6F134432218299900F71FF1 /* Photoes */ = {
 			isa = PBXGroup;
 			children = (
-				B6C06CDF2218379B00BA71B9 /* slr-camera-2-xxl.png */,
 				B6F13444221829A600F71FF1 /* placeholder-user.png */,
 			);
 			name = Photoes;
@@ -194,7 +191,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6EBBD712224787A007A0062 /* Profile.storyboard in Resources */,
-				B6C06CE02218379B00BA71B9 /* slr-camera-2-xxl.png in Resources */,
 				B6E02CDE220ED58700B9B1F4 /* LaunchScreen.storyboard in Resources */,
 				B6D0CFF222300A6000EB4DB2 /* ThemesViewController.storyboard in Resources */,
 				B6EBBD73222478C2007A0062 /* ChatViewController.storyboard in Resources */,
