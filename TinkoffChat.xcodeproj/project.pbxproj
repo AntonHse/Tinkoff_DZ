@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6056F0C222082B5008EAEB0 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */; };
+		B643D9FB222ECFB0003CDB69 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = B643D9FA222ECFB0003CDB69 /* Themes.m */; };
 		B6C06CE02218379B00BA71B9 /* slr-camera-2-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C06CDF2218379B00BA71B9 /* slr-camera-2-xxl.png */; };
+		B6D0CFF222300A6000EB4DB2 /* ThemesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D0CFF022300A6000EB4DB2 /* ThemesViewController.storyboard */; };
+		B6D0CFF52230625700EB4DB2 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */; };
+		B6D0CFF72230634900EB4DB2 /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B643D9F7222ECD36003CDB69 /* ThemesViewController.m */; };
 		B6E02CD4220ED58600B9B1F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E02CD3220ED58600B9B1F4 /* AppDelegate.swift */; };
 		B6E02CD6220ED58600B9B1F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E02CD5220ED58600B9B1F4 /* ProfileViewController.swift */; };
 		B6E02CD9220ED58600B9B1F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E02CD7220ED58600B9B1F4 /* Main.storyboard */; };
@@ -19,13 +22,21 @@
 		B6EBBD6C2223E27F007A0062 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBD6B2223E27F007A0062 /* ChatViewController.swift */; };
 		B6EBBD6E2224338D007A0062 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBD6D2224338D007A0062 /* CollectionViewCell.swift */; };
 		B6EBBD712224787A007A0062 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBD6F2224787A007A0062 /* Profile.storyboard */; };
-		B6EBBD73222478C2007A0062 /* ConversationsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBD72222478C2007A0062 /* ConversationsList.storyboard */; };
+		B6EBBD73222478C2007A0062 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBD72222478C2007A0062 /* ChatViewController.storyboard */; };
 		B6F134462218368A00F71FF1 /* placeholder-user.png in Resources */ = {isa = PBXBuildFile; fileRef = B6F13444221829A600F71FF1 /* placeholder-user.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
+		B643D9F0222ECB6F003CDB69 /* TinkoffChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinkoffChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		B643D9F1222ECB6F003CDB69 /* ThemesViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewControllerDelegate.h; sourceTree = "<group>"; };
+		B643D9F6222ECD36003CDB69 /* ThemesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewController.h; sourceTree = "<group>"; };
+		B643D9F7222ECD36003CDB69 /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
+		B643D9F9222ECFB0003CDB69 /* Themes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Themes.h; sourceTree = "<group>"; };
+		B643D9FA222ECFB0003CDB69 /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
+		B6984315222FDD1F00924574 /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
 		B6C06CDF2218379B00BA71B9 /* slr-camera-2-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "slr-camera-2-xxl.png"; path = "../../../../Тинькофф/Homework UI images/slr-camera-2-xxl.png"; sourceTree = "<group>"; };
+		B6D0CFF122300A6000EB4DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TinkoffChat/Base.lproj/ThemesViewController.storyboard; sourceTree = "<group>"; };
 		B6E02CD0220ED58600B9B1F4 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E02CD3220ED58600B9B1F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E02CD5220ED58600B9B1F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +49,7 @@
 		B6EBBD6B2223E27F007A0062 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B6EBBD6D2224338D007A0062 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B6EBBD702224787A007A0062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TinkoffChat/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
-		B6EBBD72222478C2007A0062 /* ConversationsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConversationsList.storyboard; sourceTree = "<group>"; };
+		B6EBBD72222478C2007A0062 /* ChatViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
 		B6F13444221829A600F71FF1 /* placeholder-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-user.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +64,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B643D9F2222ECB7F003CDB69 /* Objective-c_Files */ = {
+			isa = PBXGroup;
+			children = (
+				B643D9F0222ECB6F003CDB69 /* TinkoffChat-Bridging-Header.h */,
+				B643D9F1222ECB6F003CDB69 /* ThemesViewControllerDelegate.h */,
+				B643D9F9222ECFB0003CDB69 /* Themes.h */,
+				B643D9FA222ECFB0003CDB69 /* Themes.m */,
+				B643D9F7222ECD36003CDB69 /* ThemesViewController.m */,
+				B643D9F6222ECD36003CDB69 /* ThemesViewController.h */,
+			);
+			name = "Objective-c_Files";
+			sourceTree = "<group>";
+		};
+		B6D0CFF322300E0300EB4DB2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0CFF022300A6000EB4DB2 /* ThemesViewController.storyboard */,
+				B6EBBD72222478C2007A0062 /* ChatViewController.storyboard */,
+				B6EBBD6F2224787A007A0062 /* Profile.storyboard */,
+				B6E02CD7220ED58600B9B1F4 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		B6E02CC7220ED58600B9B1F4 = {
 			isa = PBXGroup;
 			children = (
@@ -74,14 +109,14 @@
 			children = (
 				B6F134432218299900F71FF1 /* Photoes */,
 				B6E02CD3220ED58600B9B1F4 /* AppDelegate.swift */,
-				B6EBBD72222478C2007A0062 /* ConversationsList.storyboard */,
-				B6EBBD6F2224787A007A0062 /* Profile.storyboard */,
-				B6E02CD7220ED58600B9B1F4 /* Main.storyboard */,
+				B6D0CFF322300E0300EB4DB2 /* Storyboards */,
 				B6EBBD672222BE1B007A0062 /* TableViewCell.swift */,
+				B6984315222FDD1F00924574 /* ThemesViewController.swift */,
+				B643D9F2222ECB7F003CDB69 /* Objective-c_Files */,
+				B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */,
 				B6EBBD6D2224338D007A0062 /* CollectionViewCell.swift */,
 				B6E02CD5220ED58600B9B1F4 /* ProfileViewController.swift */,
 				B6EBBD6B2223E27F007A0062 /* ChatViewController.swift */,
-				B6056F0B222082B5008EAEB0 /* ConversationsListViewController.swift */,
 				B6EBBD692222C609007A0062 /* EditCell.swift */,
 				B6E02CDA220ED58700B9B1F4 /* Assets.xcassets */,
 				B6E02CDC220ED58700B9B1F4 /* LaunchScreen.storyboard */,
@@ -131,6 +166,7 @@
 				TargetAttributes = {
 					B6E02CCF220ED58600B9B1F4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -160,7 +196,8 @@
 				B6EBBD712224787A007A0062 /* Profile.storyboard in Resources */,
 				B6C06CE02218379B00BA71B9 /* slr-camera-2-xxl.png in Resources */,
 				B6E02CDE220ED58700B9B1F4 /* LaunchScreen.storyboard in Resources */,
-				B6EBBD73222478C2007A0062 /* ConversationsList.storyboard in Resources */,
+				B6D0CFF222300A6000EB4DB2 /* ThemesViewController.storyboard in Resources */,
+				B6EBBD73222478C2007A0062 /* ChatViewController.storyboard in Resources */,
 				B6E02CDB220ED58700B9B1F4 /* Assets.xcassets in Resources */,
 				B6F134462218368A00F71FF1 /* placeholder-user.png in Resources */,
 				B6E02CD9220ED58600B9B1F4 /* Main.storyboard in Resources */,
@@ -176,17 +213,27 @@
 			files = (
 				B6E02CD6220ED58600B9B1F4 /* ProfileViewController.swift in Sources */,
 				B6EBBD682222BE1B007A0062 /* TableViewCell.swift in Sources */,
+				B6D0CFF72230634900EB4DB2 /* ThemesViewController.m in Sources */,
+				B6D0CFF52230625700EB4DB2 /* ConversationsListViewController.swift in Sources */,
 				B6EBBD6A2222C609007A0062 /* EditCell.swift in Sources */,
 				B6EBBD6E2224338D007A0062 /* CollectionViewCell.swift in Sources */,
 				B6E02CD4220ED58600B9B1F4 /* AppDelegate.swift in Sources */,
 				B6EBBD6C2223E27F007A0062 /* ChatViewController.swift in Sources */,
-				B6056F0C222082B5008EAEB0 /* ConversationsListViewController.swift in Sources */,
+				B643D9FB222ECFB0003CDB69 /* Themes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B6D0CFF022300A6000EB4DB2 /* ThemesViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6D0CFF122300A6000EB4DB2 /* Base */,
+			);
+			name = ThemesViewController.storyboard;
+			sourceTree = "<group>";
+		};
 		B6E02CD7220ED58600B9B1F4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -334,6 +381,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KL7GLHZ84U;
@@ -346,6 +395,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Anton-Shupletsov.DZ-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TinkoffChat/TinkoffChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -355,6 +407,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KL7GLHZ84U;
@@ -367,6 +421,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Anton-Shupletsov.DZ-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TinkoffChat/TinkoffChat-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

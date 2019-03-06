@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if flag{print("Application moved from Not running to Foreground(Inactive): \(#function)")}
 
+      //  UINavigationBar.appearance().barTintColor = UserDefaults.standard.bool(forKey: "UIColor.brown") UIColor.brown ?? UIColor.black
+        
+        
         return true
     }
 

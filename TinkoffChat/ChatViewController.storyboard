@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wfw-G6-JuR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,11 +15,11 @@
             <objects>
                 <viewController id="wfw-G6-JuR" customClass="ChatViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uv7-aO-RHI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Km7-RK-slK">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DBX-GV-ZoX">
                                     <size key="itemSize" width="346" height="52"/>
@@ -32,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6o-p2-VHq">
-                                                    <rect key="frame" x="20" y="16" width="42" height="20.5"/>
+                                                    <rect key="frame" x="20" y="16" width="308" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -47,6 +51,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="E6o-p2-VHq" firstAttribute="centerY" secondItem="7DI-NM-4Va" secondAttribute="centerY" id="IVj-77-7dG"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="E6o-p2-VHq" secondAttribute="trailing" constant="10" id="Jun-Il-mZd"/>
                                             <constraint firstItem="E6o-p2-VHq" firstAttribute="leading" secondItem="7DI-NM-4Va" secondAttribute="leadingMargin" constant="12" id="bxE-ng-Dpb"/>
                                             <constraint firstAttribute="trailing" secondItem="MkS-5q-1wV" secondAttribute="trailing" constant="8" id="hSb-jh-7T1"/>
                                             <constraint firstItem="MkS-5q-1wV" firstAttribute="centerY" secondItem="7DI-NM-4Va" secondAttribute="centerY" id="phf-Qd-M53"/>

@@ -10,14 +10,19 @@ import UIKit
 
 class ConversationsListViewController: UIViewController{
     
+ 
+
+    
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var profileBarButton: UIBarButtonItem!
+    
     @IBAction func profileBarButtonItemAction(_ sender: Any) {
+        performSegue(withIdentifier: "profile", sender: nil)
        
     }
-    
-    let groups = DispatchGroup()
+   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         makeChats()
@@ -25,14 +30,91 @@ class ConversationsListViewController: UIViewController{
         makeMessageAndDateTextFromMessages()
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        navigationController?.navigationBar.barTintColor = UserDefaults.colorForKey(key: "color")
+        
         tableView.delegate = self
         tableView.dataSource = self
      
-         
+      
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        
+        
+        if segue.identifier == "segue" {
+            let destinationVC = segue.destination as! ChatViewController
+            
+            destinationVC.navigationTitle = sender as! String
+            
+        }
+        //        for objective-c file(delegate):
+        if let dest = segue.destination as? ThemesViewController {
+            dest.delegate = self
+        }
+        
+        //        for ThemesViewController.swift file(closure):
+//        if let dest = segue.destination as? ThemesViewController {
+//
+//            dest.colorToReturn = {(dataReturned) -> ()in
+//                self.logThemeChanging(selectedTheme: dataReturned)
+//            }
+//        }
 
+    }
+
+    func logThemeChanging(selectedTheme: UIColor){
+        print("Color:\(selectedTheme)")
+        
+        if UserDefaults.standard.bool(forKey: "color") == false{
+            UserDefaults.setColor(color: selectedTheme, forKey: "color")
+        }
+        UINavigationBar.appearance().barTintColor = UserDefaults.colorForKey(key: "color")
+        
+        
+    }
+
+    }
+
+
+
+
+extension ConversationsListViewController: ThemesViewControllerDelegate{
+    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
+        logThemeChanging(selectedTheme: selectedTheme)
+    }
+}
+//End
+
+
+extension UserDefaults {
+    
+    class func colorForKey(key: String) -> UIColor? {
+        var color: UIColor?
+        if let colorData = UserDefaults.standard.value(forKey: key) {
+           //print(ok)
+            color = NSKeyedUnarchiver.unarchiveObject(with: colorData as! Data) as? UIColor
+        }
+        return color
+        
+   
+    }
+    
+    class func setColor(color: UIColor?, forKey key: String) {
+        var colorData: NSData?
+        if let color = color {
+            colorData = NSKeyedArchiver.archivedData(withRootObject: color) as NSData?
+        }
+        UserDefaults.standard.set(colorData, forKey: key)
+        UserDefaults.standard.synchronize()
+
+
+    
+    }
+    
+
+    
 }
 
 extension ConversationsListViewController: UITableViewDataSource, UITableViewDelegate{
@@ -52,6 +134,7 @@ extension ConversationsListViewController: UITableViewDataSource, UITableViewDel
         }
         return 0
     }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         
@@ -77,18 +160,7 @@ extension ConversationsListViewController: UITableViewDataSource, UITableViewDel
       
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-
-
-
-        if segue.identifier == "segue" {
-              let destinationVC = segue.destination as! ChatViewController
-
-            destinationVC.navigationTitle = sender as! String
-            
-
-        }
-    }
+    
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell", for: indexPath) as! FirstCell
@@ -127,7 +199,7 @@ extension ConversationsListViewController: UITableViewDataSource, UITableViewDel
         return cell
     }
    
-   
+  
 
 }
 

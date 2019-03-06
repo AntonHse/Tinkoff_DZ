@@ -14,6 +14,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     let imagePickerController = UIImagePickerController()
     
     
+
+
     @IBAction func editButton(_ sender: Any) {
     }
     
@@ -38,13 +40,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 //        super.init(coder: aDecoder)
 //        printInConsoleLogs(nameOfMethod: #function)
 //    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
          imagePickerController.delegate = self
         printInConsoleLogs(nameOfMethod: #function)
-    
+
         ChangeEditButton()
+        
+//        let swipeLeft = UISwipeGestureRecognizer(target: self, action: nil)
+//        swipeLeft.direction = .left
+//        self.view.addGestureRecognizer(swipeLeft)
         
         if flag{print(#function)}
     }
@@ -148,6 +154,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
     
     
 }

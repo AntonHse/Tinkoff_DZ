@@ -8,6 +8,7 @@
 
 import Foundation
 func formatDate(dateFromStr: String) -> Date{
+
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "dd.MM.yy HH:mm"
     guard let stringToDate = dateFormatter.date(from: dateFromStr) else {
@@ -77,13 +78,13 @@ let firstUser = Users(name: "Ivan Pupkin", message: "" , date: "01.01.19 23:09",
 let secondUser = Users(name: "Anton Pepko", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: true)
 let thirdUser = Users(name: "Mark Tomkin", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: true)
 let forthUser = Users(name: "Pavel Perov", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: false)
-let fifthUser = Users(name: "Vasia Klever", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: false)
+let fifthUser = Users(name: "Vasia Klever", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: false)
 let sixthUser = Users(name: "Maks Bonin", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: false)
 let seventhUser = Users(name: "Tolia Pashin", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: false)
 let eighthUser = Users(name: "Anna Furrow", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: false)
 let ninthUser = Users(name: "Jane Nyland", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: true)
 let tenthUser = Users(name: "Bob Janzen", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: false)
-let eleventhUser = Users(name: "Carole Ahlers", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: true)
+let eleventhUser = Users(name: "Carole Ahlers", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: true)
 let twelfthUser = Users(name: "Dan Krysin", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: false)
 let trirteenthUser = Users(name: "Dan Stinger", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: false)
 let fourteenthUser = Users(name: "Erica Wolfram", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: true)
@@ -91,7 +92,7 @@ let fifteenthUser = Users(name: "Bryce Banner", message: "", date: "01.01.19 23:
 let sixteenthUser = Users(name: "Bryce Bradway", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: false)
 let seventeenthUser = Users(name: "Tom Ford", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: false)
 let eightteenthUser = Users(name: "Tony Stark", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: true)
-let ninteenthUser = Users(name: "Alibaba Muskat", message: "", date: "01.01.19 23:09", online: false, hasUnreadMessades: false)
+let ninteenthUser = Users(name: "Alibaba Muskat", message: "", date: "01.01.19 23:09", online: true, hasUnreadMessades: false)
 
 
 
@@ -121,7 +122,7 @@ var allMessages =  [firstUserMessages, secondUserMessages, thirdUserMessages, fo
 
 func makeChats(){
     for i in 0...9{
-        let chat = Messages(text: "№\(i) of messagee", myMessage: false, dateInMessages: "1\(i).02.19 10:09")
+        let chat = Messages(text: "№\(i) of messageeeeeeeeeeeeeeeeeeeeeeeeeeeeeee4eeee4e4e4eeeeeeeeeeeeeeee", myMessage: false, dateInMessages: "1\(i).02.19 10:09")
     firstUserMessages.append(chat)
     }
     for i in 0...5{
@@ -197,8 +198,12 @@ func makeChats(){
     
     let today = Date()
     let calendar = Calendar.current
-    let day = calendar.component(.day, from: today)
-    let hour = calendar.component(.hour, from: today) - 1
+    var day = calendar.component(.day, from: today)
+    var hour = calendar.component(.hour, from: today) - 1
+    if calendar.component(.hour, from: today) == 0 {
+          hour = calendar.component(.hour, from: today) 
+        day -= 1
+    }
     if hour >= 10{
         let chatToday = Messages(text: "Hello", myMessage: false, dateInMessages: "\(day).02.19 \(hour):09")
         seventeenthUserMessages.append(chatToday)
@@ -260,4 +265,11 @@ func addInformatiom(){
 
 
 
-
+func returnBool() -> Bool{
+    let number = Int.random(in: 0...1)
+    if number == 0{
+        return false
+    }
+    else
+    {return true}
+}
