@@ -12,7 +12,7 @@ class CustomData{
 
     
 
-    static let customData = CustomData()
+    //static let customData = CustomData()
     var name : String = ""
     var photo : UIImage = #imageLiteral(resourceName: "placeholder-user.png")
     var info : String = ""
@@ -23,16 +23,7 @@ class CustomData{
 //        self.photo = photo
 //        self.info = info
 //    }
-    func getName() -> String {
-        return name
-    }
-    func getPhoto() -> UIImage{
-        return photo
-    }
-    func getInfo() -> String {
-        return info
-    }
-
+   
     
     required init(coder aDecoder: NSCoder) {
         self.name = aDecoder.decodeObject(forKey: "name") as! String

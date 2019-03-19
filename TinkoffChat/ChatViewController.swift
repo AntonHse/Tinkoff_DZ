@@ -13,6 +13,28 @@ class ChatViewController: UIViewController{
     var navigationTitle = ""
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet var textOfMessage: UITextField!
+    
+    @IBAction func sendButtonAction(_ sender: Any) {
+        let i = findIndexOfName(name: navigationTitle)
+       // print(currentTime())
+       // print("01.01.01 01:01")
+        allMessages[i].append( Messages(text: textOfMessage.text, myMessage: true, dateInMessages: currentTime()))
+        
+        
+    }
+    
+    @IBAction func hostAndJoin(_ sender: Any) {
+        
+        
+        
+        
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -36,6 +58,7 @@ func findIndexOfName(name: String) -> Int{
 }
 
 extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let i = findIndexOfName(name: navigationTitle)
         return allMessages[i].count
@@ -49,25 +72,42 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-
-        
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
         //cell.backgroundColor = UIColor.black
-    
+        
         let i = findIndexOfName(name: navigationTitle)
-        cell.userMessageLabel.text = allMessages[i][indexPath.row].text
-
+        
+        if allMessages[i][indexPath.row].myMessage == false
+            {
+               let date = users[offlineIndexes()[indexPath.row]].date
+            cell.userMessageLabel.text = allMessages[i][indexPath.row].text
+                cell.myTime.text = formatDatetoString(date: date!)
+               // print(users[offlineIndexes()[indexPath.row]].date)
+            }
+        else{
+            cell.myMessageLabel.text = allMessages[i][indexPath.row].text
+            
+            }
+        
+        
         cell.userMessageLabel.layer.cornerRadius = 10
         cell.userMessageLabel.layer.masksToBounds = true
-       cell.userMessageLabel.backgroundColor = UIColor.yellow
+        cell.userMessageLabel.backgroundColor = UIColor.yellow
+        
+        cell.myMessageLabel.backgroundColor = UIColor.green
+        cell.myMessageLabel.layer.cornerRadius = 10
+        cell.myMessageLabel.layer.masksToBounds = true
         //cell.userMessageLabel.bounds.inset(by: UIEdgeInsets(top: 13, left: 13, bottom: 13, right: 13))
         //cell.userMessageLabel.widthAnchor.constraint(equalToConstant: self.view.frame.width * 0.55).isActive = true
-       //cell.userMessageLabel.textCo
+        //cell.userMessageLabel.textCo
+        
+        
+        
+        return cell
 
         
+        
        
-        return cell
     }
     
     

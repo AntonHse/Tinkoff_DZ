@@ -177,6 +177,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                         self.operationButtonOutlet.isEnabled = true
                         self.operationButtonOutlet.backgroundColor = UIColor.yellow
                         self.GCDEditButtonOutlet.backgroundColor = UIColor.yellow
+                        self.loadForTextFields()
                     }
                     alert.addAction(alertAction)
                     self.present(alert, animated: true, completion: nil)
@@ -274,6 +275,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                             self.operationButtonOutlet.isEnabled = true
                             self.operationButtonOutlet.backgroundColor = UIColor.yellow
                             self.GCDEditButtonOutlet.backgroundColor = UIColor.yellow
+                            self.loadForTextFields()
                         }
                         alert.addAction(alertAction)
                         self.present(alert, animated: true, completion: nil)
@@ -294,7 +296,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                             self.operationButtonOutlet.backgroundColor = UIColor.yellow
                             self.GCDEditButtonOutlet.backgroundColor = UIColor.yellow
                         }
-                        let repeatAction = UIAlertAction(title: "Повторить", style: .default) { (action) in self.saveInfoGCD()}
+                        let repeatAction = UIAlertAction(title: "Повторить", style: .default) { (action) in self.saveInfoOperation()}
                         alert.addAction(okAction)
                         alert.addAction(repeatAction)
                         self.present(alert, animated: true, completion: nil)
@@ -304,6 +306,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
         
     }
+    
+   
+    var a = ""
+    var b: UIImage = #imageLiteral(resourceName: "placeholder-user.png")
+    var c = ""
+    
     func loadInfoOfUser(){
 
         let globalQueue =  DispatchQueue(label: "com.app.queueAnton", attributes: .concurrent)
@@ -323,6 +331,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 customData.name = unpackedName
                 customData.photo = unpackedPhoto
                 customData.info = unpackedInfo
+                
+                
 
                 
                 
@@ -365,11 +375,14 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var nameOfUserTFOutlet: UITextField!
 
     @IBAction func nameOfUserTFAction(_ sender: Any) {
-        let customDate = CustomData.customData
-
- 
-        print(customDate.name)
-        print("")
+        if a == nameOfUserTFOutlet.text{
+            GCDEditButtonOutlet.isEnabled = false
+            operationButtonOutlet.isEnabled = false
+        }
+        else{
+            GCDEditButtonOutlet.isEnabled = true
+            operationButtonOutlet.isEnabled = true
+        }
     }
     @IBOutlet var infoAboutUserLabel: UILabel!
     @IBOutlet var infoAboutUserTFOutlet: UITextField!
@@ -418,7 +431,31 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 //        printInConsoleLogs(nameOfMethod: #function)
 //    }
     
-  
+    func loadForTextFields(){
+    
+        let defaults = UserDefaults.standard
+        //let globalQueue =  DispatchQueue(label: "com.app.queueAnton", attributes: .concurrent)
+
+        if defaults.object(forKey: "custom") != nil{
+            
+            var customDataEncoded: [NSData] = defaults.object(forKey: "custom") as! [NSData]
+            
+            let unpackedName: String = NSKeyedUnarchiver.unarchiveObject(with: customDataEncoded[0] as Data) as! String
+            let unpackedPhoto: UIImage = UIImage(data: customDataEncoded[1] as Data) ?? #imageLiteral(resourceName: "placeholder-user.png")
+            let unpackedInfo: String = NSKeyedUnarchiver.unarchiveObject(with: customDataEncoded[2] as Data) as! String
+            
+            
+            self.a = unpackedName
+            self.b = unpackedPhoto
+            self.c = unpackedInfo
+            
+ 
+        
+    
+        }
+    
+}
+
     
     func editMode(){
         GCDEditButtonOutlet.backgroundColor = UIColor.yellow

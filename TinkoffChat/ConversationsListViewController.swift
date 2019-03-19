@@ -227,6 +227,8 @@ func offlineIndexes() -> [Int]{
 func formatDatetoString(date: Date) -> String{
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "dd.MM.yyyy"
+
+   // print(returnCurrentDate(), dateFormatter.string(from: date))
     if returnCurrentDate() == dateFormatter.string(from: date){
         dateFormatter.dateFormat = "HH:mm"
         let time = dateFormatter.string(from: date)
@@ -238,18 +240,21 @@ func formatDatetoString(date: Date) -> String{
         return time
     }
 }
+
+
 func returnCurrentDate() -> String{
     let today = Date()
     let calendar = Calendar.current
     let day = calendar.component(.day, from: today)
     let month = calendar.component(.month, from: today)
     let year = calendar.component(.year, from: today)
-    var currentDate = "\(day).\(month).\(year)"
-    if month < 10{
-        currentDate = "\(day).0\(month).\(year)"
-    }
-    else if day < 10{
-        currentDate = "0\(day).\(month).\(year)"
-    }
+    let currentDate = "\(day).\(month).\(year)"
+   
+//    if month < 10{
+//        currentDate = "\(day).\(month).\(year)"
+//    }
+//    else if day < 10{
+//        currentDate = "\(day).\(month).\(year)"
+//    }
     return currentDate
 }

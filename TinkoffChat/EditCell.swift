@@ -7,6 +7,18 @@
 //
 
 import Foundation
+
+func currentTime() -> String{
+    let date = Date()
+    let calendar = Calendar.current
+    let day = calendar.component(.day, from: date)
+    let month = calendar.component(.month, from: date)
+    let hour = calendar.component(.hour, from: date)
+    let minutes = calendar.component(.minute, from: date)
+    return "\(day).0\(month).19 \(hour):\(minutes)"
+    
+}
+
 func formatDate(dateFromStr: String) -> Date{
 
     let dateFormatter = DateFormatter()
@@ -14,8 +26,14 @@ func formatDate(dateFromStr: String) -> Date{
     guard let stringToDate = dateFormatter.date(from: dateFromStr) else {
         fatalError("ERROR: Date conversion failed due to mismatched format.")
     }
+    
+  
+    
+    
     return stringToDate
 }
+
+
 
 protocol ConversationCellConfiguration: class {
     var name : String? {get set}
@@ -121,8 +139,16 @@ var allMessages =  [firstUserMessages, secondUserMessages, thirdUserMessages, fo
 //let firstUserMess = Messages(text:)
 
 func makeChats(){
+    
     for i in 0...9{
-        let chat = Messages(text: "№\(i) of messageeeeeeeeeeeeeeeeeeeeeeeeeeeeeee4eeee4e4e4eeeeeeeeeeeeeeee", myMessage: false, dateInMessages: "1\(i).02.19 10:09")
+        var myMesssage = false
+        if i % 2 == 0{
+            myMesssage = false
+        }
+        else{
+            myMesssage = true
+        }
+        let chat = Messages(text: "№\(i) of mess", myMessage: myMesssage, dateInMessages: "1\(i).02.19 10:09")
     firstUserMessages.append(chat)
     }
     for i in 0...5{

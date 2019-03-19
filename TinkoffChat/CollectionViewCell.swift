@@ -12,11 +12,14 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var userMessageLabel: UILabel!
     @IBOutlet weak var myMessageLabel: UILabel!
+    @IBOutlet var myTime: UILabel!
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()
         userMessageLabel.text = ""
         myMessageLabel.text = ""
+        myTime.text = ""
 
     }
 }
