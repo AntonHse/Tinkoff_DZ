@@ -39,7 +39,7 @@ class StorageManager: NSObject {
         let appUser = AppUser.findOrInsertAppUser(in: coreDataStack.mainContext!)
         let profile: CustomData
         let name = appUser?.name ?? "User: \(UIDevice.current.name)"
-        _ = appUser?.info ?? "decription"
+        let info = appUser?.info ?? "decription"
         let image: UIImage
         
         if let imageData = appUser?.image {
@@ -48,7 +48,7 @@ class StorageManager: NSObject {
             image = UIImage(named: "placeholder-user")!
         }
         
-        profile = CustomData(name: name, photo: image, info: description)
+        profile = CustomData(name: name, photo: image, info: info)
         DispatchQueue.main.async {
             completion(profile)
         }
