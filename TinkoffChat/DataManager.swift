@@ -18,11 +18,11 @@ class CustomData{
     var info : String = ""
     init(){}
     
-//    init(name: String,photo: UIImage, info: String){
-//        self.name = name
-//        self.photo = photo
-//        self.info = info
-//    }
+    init(name: String,photo: UIImage, info: String){
+        self.name = name
+        self.photo = photo
+        self.info = info
+    }
    
     
     required init(coder aDecoder: NSCoder) {

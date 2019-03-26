@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B643D9FB222ECFB0003CDB69 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = B643D9FA222ECFB0003CDB69 /* Themes.m */; };
+		B6589E852247D3BB003BF3CB /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6589E842247D3BB003BF3CB /* CoreData.swift */; };
+		B6589E882247D7D6003BF3CB /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6589E862247D7D6003BF3CB /* TinkoffChat.xcdatamodeld */; };
+		B6589E8B224A462D003BF3CB /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6589E8A224A462D003BF3CB /* StorageManager.swift */; };
 		B666396E2240285A00BC8EB1 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666396D2240285A00BC8EB1 /* Communicator.swift */; };
 		B666397122402C0B00BC8EB1 /* CommunicatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666397022402C0B00BC8EB1 /* CommunicatorDelegate.swift */; };
 		B66639732240334E00BC8EB1 /* CommunicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66639722240334E00BC8EB1 /* CommunicatorManager.swift */; };
@@ -39,6 +42,9 @@
 		B643D9F7222ECD36003CDB69 /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
 		B643D9F9222ECFB0003CDB69 /* Themes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Themes.h; sourceTree = "<group>"; };
 		B643D9FA222ECFB0003CDB69 /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
+		B6589E842247D3BB003BF3CB /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		B6589E872247D7D6003BF3CB /* TinkoffChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinkoffChat.xcdatamodel; sourceTree = "<group>"; };
+		B6589E8A224A462D003BF3CB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B666396D2240285A00BC8EB1 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		B666397022402C0B00BC8EB1 /* CommunicatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicatorDelegate.swift; sourceTree = "<group>"; };
 		B66639722240334E00BC8EB1 /* CommunicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicatorManager.swift; sourceTree = "<group>"; };
@@ -85,6 +91,16 @@
 				B643D9F6222ECD36003CDB69 /* ThemesViewController.h */,
 			);
 			name = "Objective-c_Files";
+			sourceTree = "<group>";
+		};
+		B6589E892247D7DE003BF3CB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B6589E842247D3BB003BF3CB /* CoreData.swift */,
+				B6589E8A224A462D003BF3CB /* StorageManager.swift */,
+				B6589E862247D7D6003BF3CB /* TinkoffChat.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		B666396F2240287900BC8EB1 /* Communication */ = {
@@ -138,6 +154,7 @@
 				B6E103512235233E0043D5E2 /* Chat */,
 				B6E10352223523580043D5E2 /* Profile */,
 				B6EBBD692222C609007A0062 /* EditCell.swift */,
+				B6589E892247D7DE003BF3CB /* CoreData */,
 				B666396F2240287900BC8EB1 /* Communication */,
 				B6E02CDA220ED58700B9B1F4 /* Assets.xcassets */,
 				B6E02CDC220ED58700B9B1F4 /* LaunchScreen.storyboard */,
@@ -260,6 +277,7 @@
 				B666396E2240285A00BC8EB1 /* Communicator.swift in Sources */,
 				B666397122402C0B00BC8EB1 /* CommunicatorDelegate.swift in Sources */,
 				B66639772240D30B00BC8EB1 /* MultipeerCommunicator.swift in Sources */,
+				B6589E8B224A462D003BF3CB /* StorageManager.swift in Sources */,
 				B6E02CD6220ED58600B9B1F4 /* ProfileViewController.swift in Sources */,
 				B6EBBD682222BE1B007A0062 /* TableViewCell.swift in Sources */,
 				B66639732240334E00BC8EB1 /* CommunicatorManager.swift in Sources */,
@@ -269,6 +287,8 @@
 				B6EBBD6A2222C609007A0062 /* EditCell.swift in Sources */,
 				B6EBBD6E2224338D007A0062 /* CollectionViewCell.swift in Sources */,
 				B6E02CD4220ED58600B9B1F4 /* AppDelegate.swift in Sources */,
+				B6589E852247D3BB003BF3CB /* CoreData.swift in Sources */,
+				B6589E882247D7D6003BF3CB /* TinkoffChat.xcdatamodeld in Sources */,
 				B66639752240515700BC8EB1 /* CommunicationViewController.swift in Sources */,
 				B6EBBD6C2223E27F007A0062 /* ChatViewController.swift in Sources */,
 				B643D9FB222ECFB0003CDB69 /* Themes.m in Sources */,
@@ -502,6 +522,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B6589E862247D7D6003BF3CB /* TinkoffChat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B6589E872247D7D6003BF3CB /* TinkoffChat.xcdatamodel */,
+			);
+			currentVersion = B6589E872247D7D6003BF3CB /* TinkoffChat.xcdatamodel */;
+			path = TinkoffChat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B6E02CC8220ED58600B9B1F4 /* Project object */;
 }
