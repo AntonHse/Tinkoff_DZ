@@ -55,11 +55,11 @@ class ThemesViewController: UIViewController {
         cb((model?.theme3)!)
         
     }
-}
 
-func makeButtonBeautifull(button: UIButton){
-    button.layer.cornerRadius = 5    // радиус закругления закругление
-    button.layer.borderWidth = 2   // толщина обводки
-    button.layer.borderColor = UIColor.black.cgColor// цвет обводки
-    button.clipsToBounds = true
+    private func makeButtonBeautifull(button: UIButton){
+        button.layer.cornerRadius = 5    // радиус закругления закругление
+        button.layer.borderWidth = 2   // толщина обводки
+        button.layer.borderColor = UIColor.black.cgColor// цвет обводки
+        button.clipsToBounds = true
+    }
 }
