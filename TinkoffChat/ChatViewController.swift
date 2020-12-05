@@ -28,6 +28,8 @@ class ChatViewController: UIViewController{
     }
     
     @IBAction func hostAndJoin(_ sender: Any) {}
+
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
