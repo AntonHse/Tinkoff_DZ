@@ -12,6 +12,8 @@ class ChatViewController: UIViewController{
     
     var navigationTitle = ""
 
+    // MARK: - IBOutlet
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet var textOfMessage: UITextField!
