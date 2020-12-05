@@ -25,15 +25,7 @@ class ChatViewController: UIViewController{
         
     }
     
-    @IBAction func hostAndJoin(_ sender: Any) {
-        
-        
-        
-        
-    }
-    
-    
-    
+    @IBAction func hostAndJoin(_ sender: Any) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +34,6 @@ class ChatViewController: UIViewController{
         navigationItem.title = navigationTitle
         //makeChats()
     }
-    
-    
 }
 
 func findIndexOfName(name: String) -> Int{
@@ -57,7 +47,9 @@ func findIndexOfName(name: String) -> Int{
     
 }
 
-extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+// MARK: - Collection View DataSource & Delegate
+
+extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelegate {
   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let i = findIndexOfName(name: navigationTitle)
@@ -66,10 +58,7 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
 //    func collectionView(_ collectionView: UICollectionView, numberOfRowsInSection section: Int) -> Int {
 //        return 5
 //    }
-    
-    
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
@@ -77,17 +66,14 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         let i = findIndexOfName(name: navigationTitle)
         
-        if allMessages[i][indexPath.row].myMessage == false
-            {
-               let date = users[offlineIndexes()[indexPath.row]].date
+        if !allMessages[i][indexPath.row].myMessage {
+            let date = users[offlineIndexes()[indexPath.row]].date
             cell.userMessageLabel.text = allMessages[i][indexPath.row].text
-                cell.myTime.text = formatDatetoString(date: date!)
-               // print(users[offlineIndexes()[indexPath.row]].date)
-            }
-        else{
+            cell.myTime.text = formatDatetoString(date: date!)
+            // print(users[offlineIndexes()[indexPath.row]].date)
+        } else {
             cell.myMessageLabel.text = allMessages[i][indexPath.row].text
-            
-            }
+        }
         
         
         cell.userMessageLabel.layer.cornerRadius = 10
@@ -100,21 +86,6 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
         //cell.userMessageLabel.bounds.inset(by: UIEdgeInsets(top: 13, left: 13, bottom: 13, right: 13))
         //cell.userMessageLabel.widthAnchor.constraint(equalToConstant: self.view.frame.width * 0.55).isActive = true
         //cell.userMessageLabel.textCo
-        
-        
-        
         return cell
-
-        
-        
-       
     }
-    
-    
-    
-    
-    }
-    
-
-
-
+}
