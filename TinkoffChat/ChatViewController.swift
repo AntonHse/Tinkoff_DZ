@@ -40,15 +40,18 @@ class ChatViewController: UIViewController{
     }
 }
 
-func findIndexOfName(name: String) -> Int{
-    var index = -1
-    for i in 0...users.count-1{
-        if users[i].name == name{
-            index = i
+// MARK: - Private
+
+private extension ChatViewController {
+    func findIndexOfName(name: String) -> Int{
+        var index = -1
+        for i in 0...users.count-1{
+            if users[i].name == name{
+                index = i
+            }
         }
+        return index
     }
-    return index
-    
 }
 
 // MARK: - Collection View DataSource & Delegate
