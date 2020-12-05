@@ -20,9 +20,9 @@ class ChatViewController: UIViewController{
         let i = findIndexOfName(name: navigationTitle)
        // print(currentTime())
        // print("01.01.01 01:01")
-        allMessages[i].append( Messages(text: textOfMessage.text, myMessage: true, dateInMessages: currentTime()))
-        
-        
+        allMessages[i].append( Messages(text: textOfMessage.text,
+                                        myMessage: true,
+                                        dateInMessages: currentTime()))
     }
     
     @IBAction func hostAndJoin(_ sender: Any) {}
